@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+  <dcat:Catalog rdf:about="http://http://www.data.gov/info/dcat">
+    <dc:title>A DCAT feed of datasets for ethnicity in diff regions.</dc:title>
+    <dc:modified>2014-04-25T09:00:51+0000</dc:modified>
+    <foaf:homepage>http://www.data.gov</foaf:homepage>
+    <dcat:dataset>
+      <dcat:Dataset rdf:about="https://cdph.data.ca.gov/data.json">
+        <dc:description></dc:description>
+        <dc:identifier>71f9c7c9-abd7-40ee-987d-e19ca7f45096</dc:identifier>
+        <dc:issued>2015-01-15</dc:issued>
+        <dc:modified>2015-01-15</dc:modified>
+      </dcat:Dataset>
+    </dcat:dataset>
+
+    <dcat:dataset>
+      <dcat:Dataset rdf:about="http://wonder.cdc.gov/wonder/help/lbd.html">
+        <dc:description></dc:description>
+        <dc:identifier>5f2e0ec4-4aa6-4b00-bc1a-9fa72bbff80c</dc:identifier>
+        <dc:issued>2012-05-30</dc:issued>
+        <dc:modified>2015-06-01</dc:modified>
+      </dcat:Dataset>
+    </dcat:dataset>
+
+    <dcat:dataset>
+      <dcat:Dataset rdf:about="http://wonder.cdc.gov/wonder/help/mcd.html">
+        <dc:description></dc:description>
+        <dc:identifier>43857256-b635-456e-84b2-ec722454326d</dc:identifier>
+        <dc:issued>2009-05-08 00:00:00</dc:issued>
+        <dc:modified>2015-06-01</dc:modified>
+      </dcat:Dataset>
+    </dcat:dataset>
+
+  </dcat:Catalog>
+
+</rdf:RDF>
