@@ -13,10 +13,6 @@ or one--and-a-half that value as the threshold to define over-coverage.
 The primary goal here is to integrate data across two data sets, using the DCAT interface. 
 Any simple type of data analytics is fine. Do screen captures, and upload the code, screen captures, and a short paper to Github.
 
-Requirements:
--------------
-In order to run this project you need to import ["TestNG"](http://testng.org/doc/index.html) library and the "Jena" library.  
-
 Experiment:
 -----------
 Comparing 2 Datasets
