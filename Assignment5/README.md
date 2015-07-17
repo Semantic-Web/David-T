@@ -25,7 +25,12 @@ Add sufficient comments in the code so it is useful to the reader.
 Submit it in a separate folder at your Github Repo entitled as "Assignment 5"
 -------------------------------------------------------------------------------
 
-File includes: 
+File includes:
+---------------
 - Zipped Project File "HelloSemanticWeb"
 - Screenshots of code, output, FOAFFriends.rdf, and additionalFrieends.owl.
+- 
+Screenshots:
+------------
+Screenshots can be seen [here](https://github.com/Semantic-Web/David-T/tree/master/Assignment5/Screenshots)
 
