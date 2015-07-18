@@ -1,0 +1,29 @@
+Bureau of Justice Statistics,,,
+Filename: ardpdqpt2.3.csv,,,
+"Table 2-3. Number of states or jurisdictions using active case identification strategies, by data source, 2011",,,
+Report Title: Arrest-Related Deaths Program Data Quality Profile,,,
+Data Source(s): Arrest-Related Death Program,,,
+Author(s): Michael Planty and Andrea M. Burch,,,
+Refer questions to: askbjs@usdoj.gov or 202-307-0765,,,
+Date of version: 3/3/2015,,,
+,,,
+,,,
+Source,,,Number 
+,All states or jurisdictions,,51
+Active case identification strategies,,,41
+,Single-method identification,,24
+,,Open-source search ,16
+,,Law enforcement survey/referral,3
+,,Medical examiner data request,3
+,,Other/a,2
+,Multiple-method identification,,17
+,,Open source and law enforcement survey/referral,7
+,,Open source and database search/b,5
+,,Open source and medical examiner data request,4
+,,Medical examiner and prosecutor survey,1
+Passive case identification strategies,,,4
+Unknown case identification strategies,,,2
+Nonparticipating states,,,4
+a/Includes sole use of the National Violent Deaths Reporting System (one state) or reports to the office of the attorney general (one state). ,,,
+"b/Includes National Incident-Based Reporting System (NIBRS), National Violent Deaths Reporting System (NVDRS), and Uniform Crime Reports (UCR).",,,
+"Source: Bureau of Justice Statistics, Arrest-Related Deaths Program, 2011.",,,

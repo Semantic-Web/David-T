@@ -1,0 +1,7 @@
+"Figure 2: Estimated proportion of law enforcement homicide universe covered by each source, with no agency adjustment, 2003–09 and 2011",
+,
+Unobserved,28
+ARD and SHR,23
+ARD only,26
+SHR only,23
+"RTI implemented a monte carlo replication approach to match SHR and ARD cases (see table 1). There were an estimated 5,324 law enforcement homicides reported to either system in the observed years. More than two-thirds of those homicides were not able to be matched across data sources. The level of unmatched cases was greatest in 2005 (75.6%) and lowest in 2011 (60.4%). Certainty matches across sources are created when cases match on the originating agency identifier (ORI) number, year, and sex, within 1 month of date of death (or date of report for SHR) and within 5 years for age. Across all observed years, approximately 21% of all law enforcement homicides reported to either source were certainty matches, ranging from 15% in 2008 to 26% in 2009 and 2011. These certainty matches represent 94.5% of ARD cases with one or more SHR pairings satisfying the certainty criteria noted above (not shown). The remaining 5.5% have more than one match that satisfies the certainty criteria (4.9% have two matches, and the remaining 0.6% have between three and six matches).",
