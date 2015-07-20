@@ -1,0 +1,957 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ADLpedometer "http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#"
+     xml:base="http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ADLpedometer="http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl">
+        <rdfs:comment>An ADL Recognition ontology that describes the various actions of humans based on their detected motion primitives while carrying a single wrist-worn tri-axial accelerometer.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasHMPdata -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;hasHMPdata">
+        <rdfs:domain rdf:resource="&ADLpedometer;ADL_Data"/>
+        <rdfs:range rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;hasReceivedData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasReceivedData -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;hasReceivedData">
+        <rdfs:domain rdf:resource="&ADLpedometer;ADL_Data"/>
+        <rdfs:range rdf:resource="&ADLpedometer;Accelerometer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasSentData -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;hasSentData">
+        <rdfs:domain rdf:resource="&ADLpedometer;Accelerometer"/>
+        <owl:inverseOf rdf:resource="&ADLpedometer;hasReceivedData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasStartTimeData -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;hasStartTimeData">
+        <rdfs:domain rdf:resource="&ADLpedometer;ADL_Data"/>
+        <rdfs:range rdf:resource="&ADLpedometer;StartTime"/>
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;hasReceivedData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasVolunteerData -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;hasVolunteerData">
+        <rdfs:domain rdf:resource="&ADLpedometer;ADL_Data"/>
+        <rdfs:range rdf:resource="&ADLpedometer;Volunteer"/>
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;hasReceivedData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#isCreatedBy -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;isCreatedBy">
+        <rdfs:domain rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+        <rdfs:range rdf:resource="&ADLpedometer;Volunteer"/>
+        <owl:inverseOf rdf:resource="&ADLpedometer;isCreating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#isCreating -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;isCreating">
+        <rdfs:range rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+        <rdfs:domain rdf:resource="&ADLpedometer;Volunteer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#isHMPRecordedBy -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;isHMPRecordedBy">
+        <rdfs:range rdf:resource="&ADLpedometer;Accelerometer"/>
+        <rdfs:domain rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;isRecordedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#isRecordedBy -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;isRecordedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#isRecording -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;isRecording">
+        <rdfs:domain rdf:resource="&ADLpedometer;Accelerometer"/>
+        <rdfs:range rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+        <rdfs:range rdf:resource="&ADLpedometer;StartTime"/>
+        <rdfs:range rdf:resource="&ADLpedometer;Volunteer"/>
+        <owl:inverseOf rdf:resource="&ADLpedometer;isRecordedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#isRecordingHMP -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;isRecordingHMP">
+        <owl:inverseOf rdf:resource="&ADLpedometer;isHMPRecordedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;isRecording"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#isRecordingTimeStamp -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;isRecordingTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;isRecording"/>
+        <owl:inverseOf rdf:resource="&ADLpedometer;isTimeStampRecordedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#isRecordingVolunteer -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;isRecordingVolunteer">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;isRecording"/>
+        <owl:inverseOf rdf:resource="&ADLpedometer;isVolunteerRecordedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#isTimeStampRecordedBy -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;isTimeStampRecordedBy">
+        <rdfs:range rdf:resource="&ADLpedometer;Accelerometer"/>
+        <rdfs:domain rdf:resource="&ADLpedometer;StartTime"/>
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;isRecordedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#isVolunteerRecordedBy -->
+
+    <owl:ObjectProperty rdf:about="&ADLpedometer;isVolunteerRecordedBy">
+        <rdfs:range rdf:resource="&ADLpedometer;Accelerometer"/>
+        <rdfs:domain rdf:resource="&ADLpedometer;Volunteer"/>
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;isRecordedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;hasAge">
+        <rdfs:domain rdf:resource="&ADLpedometer;Volunteer"/>
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;volunteer"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasDay -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;hasDay">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;startTime"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasGenger -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;hasGenger">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;volunteer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasHour -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;hasHour">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;startTime"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasMinute -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;hasMinute">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;startTime"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasMonth -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;hasMonth">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;startTime"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasProgressiveNumber -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;hasProgressiveNumber">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;volunteer"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasSecond -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;hasSecond">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;startTime"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;hasWeight">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;volunteer"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#hasYear -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;hasYear">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;startTime"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#location -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;location">
+        <rdfs:domain rdf:resource="&ADLpedometer;Accelerometer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#startTime -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;startTime">
+        <rdfs:domain rdf:resource="&ADLpedometer;StartTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#volunteer -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;volunteer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#xAxis -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;xAxis">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;location"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#yAxis -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;yAxis">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;location"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#zAxis -->
+
+    <owl:DatatypeProperty rdf:about="&ADLpedometer;zAxis">
+        <rdfs:subPropertyOf rdf:resource="&ADLpedometer;location"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#ADL_Data -->
+
+    <owl:Class rdf:about="&ADLpedometer;ADL_Data">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ADLpedometer;Accelerometer-2011-05-30-10-39-27-getup_bed-m1"/>
+                    <rdf:Description rdf:about="&ADLpedometer;Accelerometer-2011-04-11-11-58-30-climb_stairs-f1"/>
+                    <rdf:Description rdf:about="&ADLpedometer;Accelerometer-2011-05-31-15-16-47-brush_teeth-f1"/>
+                    <rdf:Description rdf:about="&ADLpedometer;Accelerometer-2011-03-24-13-21-39-eat_meat-f1"/>
+                    <rdf:Description rdf:about="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Contains ADL Records of Human motion primitives</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer -->
+
+    <owl:Class rdf:about="&ADLpedometer;Accelerometer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Age -->
+
+    <owl:Class rdf:about="&ADLpedometer;Age">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;Volunteer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Brush_teeth -->
+
+    <owl:Class rdf:about="&ADLpedometer;Brush_teeth">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Climb_stairs -->
+
+    <owl:Class rdf:about="&ADLpedometer;Climb_stairs">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Comb_hair -->
+
+    <owl:Class rdf:about="&ADLpedometer;Comb_hair">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Day -->
+
+    <owl:Class rdf:about="&ADLpedometer;Day">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;StartTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Descend_stairs -->
+
+    <owl:Class rdf:about="&ADLpedometer;Descend_stairs">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Drink_glass -->
+
+    <owl:Class rdf:about="&ADLpedometer;Drink_glass">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Eat_meat -->
+
+    <owl:Class rdf:about="&ADLpedometer;Eat_meat">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Eat_soup -->
+
+    <owl:Class rdf:about="&ADLpedometer;Eat_soup">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Female -->
+
+    <owl:Class rdf:about="&ADLpedometer;Female">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;Gender"/>
+        <owl:disjointWith rdf:resource="&ADLpedometer;Male"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Gender -->
+
+    <owl:Class rdf:about="&ADLpedometer;Gender">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;Volunteer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Getup_bed -->
+
+    <owl:Class rdf:about="&ADLpedometer;Getup_bed">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Hour -->
+
+    <owl:Class rdf:about="&ADLpedometer;Hour">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;StartTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#HumanMotionPrimitives -->
+
+    <owl:Class rdf:about="&ADLpedometer;HumanMotionPrimitives"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Liedown_bed -->
+
+    <owl:Class rdf:about="&ADLpedometer;Liedown_bed">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Location -->
+
+    <owl:Class rdf:about="&ADLpedometer;Location">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;Accelerometer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Male -->
+
+    <owl:Class rdf:about="&ADLpedometer;Male">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;Gender"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Minute -->
+
+    <owl:Class rdf:about="&ADLpedometer;Minute">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;StartTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Month -->
+
+    <owl:Class rdf:about="&ADLpedometer;Month">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;StartTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Pour_water -->
+
+    <owl:Class rdf:about="&ADLpedometer;Pour_water">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#ProgressiveNumber -->
+
+    <owl:Class rdf:about="&ADLpedometer;ProgressiveNumber">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;Volunteer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Second -->
+
+    <owl:Class rdf:about="&ADLpedometer;Second">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;StartTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Sitdown_chair -->
+
+    <owl:Class rdf:about="&ADLpedometer;Sitdown_chair">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Standup_chair -->
+
+    <owl:Class rdf:about="&ADLpedometer;Standup_chair">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#StartTime -->
+
+    <owl:Class rdf:about="&ADLpedometer;StartTime">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ADLpedometer;hasDay"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ADLpedometer;hasSecond"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ADLpedometer;hasHour"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ADLpedometer;hasYear"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ADLpedometer;hasMonth"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ADLpedometer;hasMinute"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Use_telephone -->
+
+    <owl:Class rdf:about="&ADLpedometer;Use_telephone">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Volunteer -->
+
+    <owl:Class rdf:about="&ADLpedometer;Volunteer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ADLpedometer;hasGenger"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ADLpedometer;hasAge"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ADLpedometer;hasProgressiveNumber"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ADLpedometer;hasWeight"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Walk -->
+
+    <owl:Class rdf:about="&ADLpedometer;Walk">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Weight -->
+
+    <owl:Class rdf:about="&ADLpedometer;Weight">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;Volunteer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Year -->
+
+    <owl:Class rdf:about="&ADLpedometer;Year">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;StartTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#ZAxis -->
+
+    <owl:Class rdf:about="&ADLpedometer;ZAxis">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#xAxis -->
+
+    <owl:Class rdf:about="&ADLpedometer;xAxis">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#yAxis -->
+
+    <owl:Class rdf:about="&ADLpedometer;yAxis">
+        <rdfs:subClassOf rdf:resource="&ADLpedometer;Location"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer-2011-03-24-13-17-06-drink_glass-f1 -->
+
+    <owl:NamedIndividual rdf:about="&ADLpedometer;Accelerometer-2011-03-24-13-17-06-drink_glass-f1">
+        <rdf:type rdf:resource="&ADLpedometer;Volunteer"/>
+        <hasMonth rdf:datatype="&xsd;integer">03</hasMonth>
+        <hasSecond rdf:datatype="&xsd;integer">06</hasSecond>
+        <hasProgressiveNumber rdf:datatype="&xsd;integer">1</hasProgressiveNumber>
+        <hasHour rdf:datatype="&xsd;integer">13</hasHour>
+        <hasMinute rdf:datatype="&xsd;integer">17</hasMinute>
+        <yAxis rdf:datatype="&xsd;integer">20</yAxis>
+        <hasYear rdf:datatype="&xsd;integer">2011</hasYear>
+        <hasAge rdf:datatype="&xsd;integer">22</hasAge>
+        <hasDay rdf:datatype="&xsd;integer">24</hasDay>
+        <zAxis rdf:datatype="&xsd;integer">30</zAxis>
+        <xAxis rdf:datatype="&xsd;integer">33</xAxis>
+        <hasWeight rdf:datatype="&xsd;integer">60</hasWeight>
+        <hasGenger rdf:datatype="&xsd;string">f</hasGenger>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer-2011-03-24-13-21-39-eat_meat-f1 -->
+
+    <owl:NamedIndividual rdf:about="&ADLpedometer;Accelerometer-2011-03-24-13-21-39-eat_meat-f1">
+        <rdf:type rdf:resource="&ADLpedometer;ADL_Data"/>
+        <hasStartTimeData rdf:resource="&ADLpedometer;Accelerometer-2011-06-02-10-40-10-climb_stairs-f1"/>
+        <hasReceivedData rdf:resource="&ADLpedometer;Accelerometer-2011-06-02-10-40-10-climb_stairs-f1"/>
+        <hasVolunteerData rdf:resource="&ADLpedometer;Accelerometer-2011-06-02-10-40-10-climb_stairs-f1"/>
+        <hasHMPdata rdf:resource="&ADLpedometer;Accelerometer-2011-06-02-10-40-10-climb_stairs-f1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer-2011-04-11-11-48-09-standup_chair-f1 -->
+
+    <owl:NamedIndividual rdf:about="&ADLpedometer;Accelerometer-2011-04-11-11-48-09-standup_chair-f1">
+        <rdf:type rdf:resource="&ADLpedometer;Accelerometer"/>
+        <rdf:type rdf:resource="&ADLpedometer;HumanMotionPrimitives"/>
+        <rdf:type rdf:resource="&ADLpedometer;StartTime"/>
+        <rdf:type rdf:resource="&ADLpedometer;Volunteer"/>
+        <hasMonth rdf:datatype="&xsd;integer">04</hasMonth>
+        <hasSecond rdf:datatype="&xsd;integer">09</hasSecond>
+        <hasProgressiveNumber rdf:datatype="&xsd;integer">1</hasProgressiveNumber>
+        <hasHour rdf:datatype="&xsd;integer">11</hasHour>
+        <hasDay rdf:datatype="&xsd;integer">11</hasDay>
+        <hasYear rdf:datatype="&xsd;integer">2011</hasYear>
+        <xAxis rdf:datatype="&xsd;integer">22</xAxis>
+        <yAxis rdf:datatype="&xsd;integer">23</yAxis>
+        <zAxis rdf:datatype="&xsd;integer">25</zAxis>
+        <hasAge rdf:datatype="&xsd;integer">25</hasAge>
+        <hasMinute rdf:datatype="&xsd;integer">48</hasMinute>
+        <hasWeight rdf:datatype="&xsd;integer">55</hasWeight>
+        <hasGenger rdf:datatype="&xsd;string">f</hasGenger>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer-2011-04-11-11-51-27-descend_stairs-f1 -->
+
+    <owl:NamedIndividual rdf:about="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1">
+        <rdf:type rdf:resource="&ADLpedometer;ADL_Data"/>
+        <hasStartTimeData rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+        <isCreating rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+        <hasVolunteerData rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+        <hasReceivedData rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+        <hasHMPdata rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer-2011-04-11-11-58-30-climb_stairs-f1 -->
+
+    <owl:NamedIndividual rdf:about="&ADLpedometer;Accelerometer-2011-04-11-11-58-30-climb_stairs-f1">
+        <rdf:type rdf:resource="&ADLpedometer;Volunteer"/>
+        <hasMonth rdf:datatype="&xsd;integer">04</hasMonth>
+        <hasProgressiveNumber rdf:datatype="&xsd;integer">1</hasProgressiveNumber>
+        <hasHour rdf:datatype="&xsd;integer">11</hasHour>
+        <hasDay rdf:datatype="&xsd;integer">11</hasDay>
+        <hasYear rdf:datatype="&xsd;integer">2011</hasYear>
+        <hasAge rdf:datatype="&xsd;integer">24</hasAge>
+        <yAxis rdf:datatype="&xsd;integer">25</yAxis>
+        <hasSecond rdf:datatype="&xsd;integer">30</hasSecond>
+        <xAxis rdf:datatype="&xsd;integer">32</xAxis>
+        <zAxis rdf:datatype="&xsd;integer">33</zAxis>
+        <hasWeight rdf:datatype="&xsd;integer">57</hasWeight>
+        <hasMinute rdf:datatype="&xsd;integer">58</hasMinute>
+        <hasGenger rdf:datatype="&xsd;string">m</hasGenger>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer-2011-05-30-10-38-41-liedown_bed-m1 -->
+
+    <owl:NamedIndividual rdf:about="&ADLpedometer;Accelerometer-2011-05-30-10-38-41-liedown_bed-m1">
+        <rdf:type rdf:resource="&ADLpedometer;Volunteer"/>
+        <hasMonth rdf:datatype="&xsd;integer">05</hasMonth>
+        <hasProgressiveNumber rdf:datatype="&xsd;integer">1</hasProgressiveNumber>
+        <hasHour rdf:datatype="&xsd;integer">10</hasHour>
+        <hasYear rdf:datatype="&xsd;integer">2011</hasYear>
+        <zAxis rdf:datatype="&xsd;integer">21</zAxis>
+        <xAxis rdf:datatype="&xsd;integer">23</xAxis>
+        <hasAge rdf:datatype="&xsd;integer">25</hasAge>
+        <yAxis rdf:datatype="&xsd;integer">25</yAxis>
+        <hasDay rdf:datatype="&xsd;integer">30</hasDay>
+        <hasMinute rdf:datatype="&xsd;integer">38</hasMinute>
+        <hasSecond rdf:datatype="&xsd;integer">41</hasSecond>
+        <hasWeight rdf:datatype="&xsd;integer">70</hasWeight>
+        <hasGenger rdf:datatype="&xsd;string">m</hasGenger>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer-2011-05-30-10-39-27-getup_bed-m1 -->
+
+    <owl:NamedIndividual rdf:about="&ADLpedometer;Accelerometer-2011-05-30-10-39-27-getup_bed-m1">
+        <rdf:type rdf:resource="&ADLpedometer;ADL_Data"/>
+        <hasReceivedData rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+        <hasHMPdata rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+        <hasVolunteerData rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+        <hasStartTimeData rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer-2011-05-31-15-05-44-walk-f1 -->
+
+    <owl:NamedIndividual rdf:about="&ADLpedometer;Accelerometer-2011-05-31-15-05-44-walk-f1">
+        <rdf:type rdf:resource="&ADLpedometer;Volunteer"/>
+        <hasMinute rdf:datatype="&xsd;integer">05</hasMinute>
+        <hasMonth rdf:datatype="&xsd;integer">05</hasMonth>
+        <hasProgressiveNumber rdf:datatype="&xsd;integer">1</hasProgressiveNumber>
+        <hasHour rdf:datatype="&xsd;integer">15</hasHour>
+        <hasYear rdf:datatype="&xsd;integer">2011</hasYear>
+        <zAxis rdf:datatype="&xsd;integer">21</zAxis>
+        <xAxis rdf:datatype="&xsd;integer">22</xAxis>
+        <yAxis rdf:datatype="&xsd;integer">23</yAxis>
+        <hasAge rdf:datatype="&xsd;integer">28</hasAge>
+        <hasDay rdf:datatype="&xsd;integer">31</hasDay>
+        <hasSecond rdf:datatype="&xsd;integer">44</hasSecond>
+        <hasWeight rdf:datatype="&xsd;integer">58</hasWeight>
+        <hasGenger rdf:datatype="&xsd;string">f</hasGenger>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer-2011-05-31-15-16-47-brush_teeth-f1 -->
+
+    <owl:NamedIndividual rdf:about="&ADLpedometer;Accelerometer-2011-05-31-15-16-47-brush_teeth-f1">
+        <rdf:type rdf:resource="&ADLpedometer;ADL_Data"/>
+        <hasVolunteerData rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+        <hasStartTimeData rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+        <hasHMPdata rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+        <hasReceivedData rdf:resource="&ADLpedometer;Accelerometer-2011-04-11-11-51-27-descend_stairs-f1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dt/ontologies/2015/5/ADLpedometer.owl#Accelerometer-2011-06-02-10-40-10-climb_stairs-f1 -->
+
+    <owl:NamedIndividual rdf:about="&ADLpedometer;Accelerometer-2011-06-02-10-40-10-climb_stairs-f1">
+        <rdf:type rdf:resource="&ADLpedometer;ADL_Data"/>
+        <hasReceivedData rdf:resource="&ADLpedometer;Accelerometer-2011-06-02-10-40-10-climb_stairs-f1"/>
+        <hasHMPdata rdf:resource="&ADLpedometer;Accelerometer-2011-06-02-10-40-10-climb_stairs-f1"/>
+        <hasStartTimeData rdf:resource="&ADLpedometer;Accelerometer-2011-06-02-10-40-10-climb_stairs-f1"/>
+        <hasVolunteerData rdf:resource="&ADLpedometer;Accelerometer-2011-06-02-10-40-10-climb_stairs-f1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ADLpedometer;Brush_teeth"/>
+            <rdf:Description rdf:about="&ADLpedometer;Climb_stairs"/>
+            <rdf:Description rdf:about="&ADLpedometer;Comb_hair"/>
+            <rdf:Description rdf:about="&ADLpedometer;Descend_stairs"/>
+            <rdf:Description rdf:about="&ADLpedometer;Drink_glass"/>
+            <rdf:Description rdf:about="&ADLpedometer;Eat_meat"/>
+            <rdf:Description rdf:about="&ADLpedometer;Eat_soup"/>
+            <rdf:Description rdf:about="&ADLpedometer;Getup_bed"/>
+            <rdf:Description rdf:about="&ADLpedometer;Liedown_bed"/>
+            <rdf:Description rdf:about="&ADLpedometer;Pour_water"/>
+            <rdf:Description rdf:about="&ADLpedometer;Sitdown_chair"/>
+            <rdf:Description rdf:about="&ADLpedometer;Standup_chair"/>
+            <rdf:Description rdf:about="&ADLpedometer;Use_telephone"/>
+            <rdf:Description rdf:about="&ADLpedometer;Walk"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ADLpedometer;Age"/>
+            <rdf:Description rdf:about="&ADLpedometer;Brush_teeth"/>
+            <rdf:Description rdf:about="&ADLpedometer;Climb_stairs"/>
+            <rdf:Description rdf:about="&ADLpedometer;Comb_hair"/>
+            <rdf:Description rdf:about="&ADLpedometer;Day"/>
+            <rdf:Description rdf:about="&ADLpedometer;Descend_stairs"/>
+            <rdf:Description rdf:about="&ADLpedometer;Drink_glass"/>
+            <rdf:Description rdf:about="&ADLpedometer;Eat_meat"/>
+            <rdf:Description rdf:about="&ADLpedometer;Eat_soup"/>
+            <rdf:Description rdf:about="&ADLpedometer;Gender"/>
+            <rdf:Description rdf:about="&ADLpedometer;Getup_bed"/>
+            <rdf:Description rdf:about="&ADLpedometer;Hour"/>
+            <rdf:Description rdf:about="&ADLpedometer;Liedown_bed"/>
+            <rdf:Description rdf:about="&ADLpedometer;Location"/>
+            <rdf:Description rdf:about="&ADLpedometer;Minute"/>
+            <rdf:Description rdf:about="&ADLpedometer;Month"/>
+            <rdf:Description rdf:about="&ADLpedometer;Pour_water"/>
+            <rdf:Description rdf:about="&ADLpedometer;ProgressiveNumber"/>
+            <rdf:Description rdf:about="&ADLpedometer;Second"/>
+            <rdf:Description rdf:about="&ADLpedometer;Sitdown_chair"/>
+            <rdf:Description rdf:about="&ADLpedometer;Standup_chair"/>
+            <rdf:Description rdf:about="&ADLpedometer;Use_telephone"/>
+            <rdf:Description rdf:about="&ADLpedometer;Walk"/>
+            <rdf:Description rdf:about="&ADLpedometer;Weight"/>
+            <rdf:Description rdf:about="&ADLpedometer;Year"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ADLpedometer;Day"/>
+            <rdf:Description rdf:about="&ADLpedometer;Hour"/>
+            <rdf:Description rdf:about="&ADLpedometer;Minute"/>
+            <rdf:Description rdf:about="&ADLpedometer;Month"/>
+            <rdf:Description rdf:about="&ADLpedometer;Second"/>
+            <rdf:Description rdf:about="&ADLpedometer;Year"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ADLpedometer;Age"/>
+            <rdf:Description rdf:about="&ADLpedometer;Gender"/>
+            <rdf:Description rdf:about="&ADLpedometer;ProgressiveNumber"/>
+            <rdf:Description rdf:about="&ADLpedometer;Weight"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ADLpedometer;ZAxis"/>
+            <rdf:Description rdf:about="&ADLpedometer;xAxis"/>
+            <rdf:Description rdf:about="&ADLpedometer;yAxis"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
