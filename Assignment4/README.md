@@ -47,8 +47,10 @@ After Parsing the two RDF files within python and combining the 2 datasets, I ha
   2013  Black                                 275           25837                 10.6
   2013  Total                                2348          494392                  4.7
   
-  Conclusion:
-  -----------
-  Infants with two or more races had the highest rate of mortalities with a rate of 11.9 deaths for every 1000 births.
-  Black infants came in second with a rate of 10.6 deaths for every 1000 births.
-  Asian infants had the lowest mortality rate at 2.5 deaths for every 1000 births. 
+![alt tag](https://raw.githubusercontent.com/Semantic-Web/David-T/master/Assignment4/Screenshots/Infant%20Mortality%20Rate%20Graph.png)
+  
+Conclusion:
+-----------
+Infants with two or more races had the highest rate of mortalities with a rate of 11.9 deaths for every 1000 births.
+Black infants came in second with a rate of 10.6 deaths for every 1000 births.
+Asian infants had the lowest mortality rate at 2.5 deaths for every 1000 births. 
