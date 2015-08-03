@@ -1,0 +1,92 @@
+  YEAR  ETHNICITY                    Total Deaths
+------  -------------------------  --------------
+  2013  Asian                                 170
+  2013  White/Other                           533
+  2013  Pacific Islander/Hawaiian               6
+  2013  Hispanic                             1212
+  2013  American Indian                         9
+  2013  Not Stated or Unknown                  10
+  2013  Two or more races                     133
+  2013  Total                                2348
+  2013  Black                                 275
+  2012  Total                                2247
+  2012  Asian                                 198
+  2012  Two or more races                      84
+  2012  Hispanic                             1159
+  2012  Black                                 261
+  2012  American Indian                         7
+  2012  Not Stated or Unknown                   7
+  2012  White/Other                           523
+  2012  Pacific Islander/Hawaiian               8
+  2011  Not Stated or Unknown                  12
+  2011  Black                                 284
+  2011  American Indian                        10
+  2011  Pacific Islander/Hawaiian              20
+  2011  Two or more races                      96
+  2011  Total                                2397
+  2011  Asian                                 174
+  2011  Hispanic                             1228
+  2011  White/Other                           573
+  2010  American Indian                        15
+  2010  Not Stated or Unknown                  11
+  2010  Two or more races                     106
+  2010  Pacific Islander/Hawaiian              16
+  2010  Hispanic                             1264
+  2010  Black                                 264
+  2010  Asian                                 162
+  2010  Total                                2419
+  2010  White/Other                           581
+  2009  Asian                                 197
+  2009  Total                                2593
+  2009  Black                                 303
+  2009  Hispanic                             1354
+  2009  White/Other                           578
+  2009  Two or more races                     118
+  2009  Pacific Islander/Hawaiian              18
+  2009  American Indian                        11
+  2009  Not Stated or Unknown                  14
+  2008  Asian                                 203
+  2008  Total                                2806
+  2008  American Indian                        11
+  2008  Black                                 356
+  2008  Two or more races                     104
+  2008  White/Other                           609
+  2008  Hispanic                             1504
+  2008  Pacific Islander/Hawaiian              15
+  2008  Not Stated or Unknown                   4
+  2007  Hispanic                             1526
+  2007  White/Other                           691
+  2007  Black                                 340
+  2007  Total                                2941
+  2007  Pacific Islander/Hawaiian              16
+  2007  American Indian                         8
+  2007  Two or more races                     135
+  2007  Asian                                 222
+  2007  Not Stated or Unknown                   3
+  2006  Black                                 346
+  2006  Asian                                 192
+  2006  Hispanic                             1487
+  2006  American Indian                        14
+  2006  Total                                2829
+  2006  Two or more races                      85
+  2006  Not Stated or Unknown                   6
+  2006  White/Other                           683
+  2006  Pacific Islander/Hawaiian              16
+  2005  Black                                 365
+  2005  Hispanic                             1497
+  2005  Pacific Islander/Hawaiian              18
+  2005  Not Stated or Unknown                  15
+  2005  White/Other                           735
+  2005  Total                                2913
+  2005  Two or more races                      87
+  2005  American Indian                        10
+  2005  Asian                                 186
+  2004  White/Other                           730
+  2004  Pacific Islander/Hawaiian              20
+  2004  American Indian                        10
+  2004  Asian                                 183
+  2004  Not Stated or Unknown                   9
+  2004  Black                                 343
+  2004  Two or more races                      90
+  2004  Hispanic                             1426
+  2004  Total                                2811

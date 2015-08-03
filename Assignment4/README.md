@@ -1,6 +1,4 @@
 Assignment 4:
-Note - Assignment still missing Short Paper and Data Analytics  
-Description:
 -----------
 Essentially DCAT will allow us to find all related data across multiple data.gov/ federal data sites. 
 Try to find related data across databases (see data.gov)  to answer  slightly complicated questions. 
@@ -17,5 +15,40 @@ Experiment:
 -----------
 Comparing 2 Datasets
 - 1st Dataset from Data.gov includes "Estimates of the population by age, sex, race, and Hispanic origin for the nation, states, and counties" ;
+http://catalog.data.gov/dataset/population-estimates
 - 2nd Dataset from HealthCare.gov includes "Mortality Rate By Region" ;
+http://catalog.data.gov/dataset/infant-mortality-by-race-ethnicity-2004-2013
 
+My goal was to combine these two datasets and compare the infant mortality rate between the different races (White, Black, American Indian, Asian, Hispanic, Pacific Islander, And Two or More Races).
+one dataset showed the total deaths there were for all infants across the different races. The second dataset showed the population estimate across the united states for all ages and races. 
+I provided a method to narrow the population estimate to show only the infants in the united states so I could see the total number of infants in the US for each race.
+This number was essentially the "Total Number of Births" in the US for each race.
+
+Data Analysis Performed:
+-------------------------
+To find the infant mortality rate for each race, I had to first find the infant population for each race across the US to use as a base denominator. 
+Secondly, I had to find the number of total infant deaths for each race. The number of total deaths divided by the total number of births(infant population)
+returned the mortality rate for each race.   
+
+
+
+Results:
+-----------
+After Parsing the two RDF files within python and combining the 2 datasets, I have discovered that in 2013 the rates for infant mortalities for each race were as follows:
+
+  YEAR  ETHNICITY                    Total Deaths    Total Births    Total Deaths Rate
+------  -------------------------  --------------  --------------  -------------------
+  2013  Asian                                 170           68117                  2.5
+  2013  White/Other                           533          137896                  3.9
+  2013  Pacific Islander/Hawaiian               6            1994                  3
+  2013  Hispanic                             1212          238200                  5.1
+  2013  American Indian                         9            1794                  5
+  2013  Two or more races                     133           11169                 11.9
+  2013  Black                                 275           25837                 10.6
+  2013  Total                                2348          494392                  4.7
+  
+  Conclusion:
+  -----------
+  Infants with two or more races had the highest rate of mortalities with a rate of 11.9 deaths for every 1000 births.
+  Black infants came in second with a rate of 10.6 deaths for every 1000 births.
+  Asian infants had the lowest mortality rate at 2.5 deaths for every 1000 births. 
