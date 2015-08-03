@@ -36,16 +36,9 @@ Results:
 -----------
 After Parsing the two RDF files within python and combining the 2 datasets, I have discovered that in 2013 the rates for infant mortalities for each race were as follows:
 
-  YEAR  ETHNICITY                    Total Deaths    Total Births    Total Deaths Rate
-------  -------------------------  --------------  --------------  -------------------
-  2013  Asian                                 170           68117                  2.5
-  2013  White/Other                           533          137896                  3.9
-  2013  Pacific Islander/Hawaiian               6            1994                  3
-  2013  Hispanic                             1212          238200                  5.1
-  2013  American Indian                         9            1794                  5
-  2013  Two or more races                     133           11169                 11.9
-  2013  Black                                 275           25837                 10.6
-  2013  Total                                2348          494392                  4.7
+![alt tag](https://raw.githubusercontent.com/Semantic-Web/David-T/master/Assignment4/Screenshots/2013%20Rates.png)
+
+
   
 ![alt tag](https://raw.githubusercontent.com/Semantic-Web/David-T/master/Assignment4/Screenshots/Infant%20Mortality%20Rate%20Graph.png)
   
