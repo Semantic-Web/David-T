@@ -9,4 +9,10 @@ Semantic Web Course Submissions of David T
 
 [Assignment 5](Assignment5)
 
+[Assignment 7](Assignment7)
+
 [Midterm Exam](Midterm Exam)
+
+[Term Project Report](Term Project Report)
+
+
