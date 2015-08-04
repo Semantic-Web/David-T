@@ -6,6 +6,10 @@ CSV Table Top Populated Florida Schools:
 -----------
 ![tag](https://raw.githubusercontent.com/Semantic-Web/David-T/master/Assignment%207/top10FloridaSchools.png)
 
+Code to Find School Addresses:
+-------------------------------
+![tag](https://raw.githubusercontent.com/Semantic-Web/David-T/master/Assignment%207/GeonamesCodeForAddresses.png)
+
 Addresses:
 ----------
 ![tag](https://raw.githubusercontent.com/Semantic-Web/David-T/master/Assignment%207/AddressesForTop10FloridaSchools.png)
