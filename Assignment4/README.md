@@ -1,5 +1,5 @@
-Assignment 4:
------------
+Assignment 4: U.S. Infant Mortality Rates by Ethnic Race
+---------------------------------------------------------
 Essentially DCAT will allow us to find all related data across multiple data.gov/ federal data sites. 
 Try to find related data across databases (see data.gov)  to answer  slightly complicated questions. 
 For example, you will have to use census data to find ethnic backgrounds and ages in various US regions and data from HealthData.gov on mortality and morbidity rates, 
