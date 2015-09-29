@@ -1,0 +1,2005 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology">
+    <Prefix name="" IRI="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An ontology for the demographic metrics in US Metro Areas</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Births"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crime_Rate_Per_Every_100000_Inhabitants"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Deaths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Demographic_Area"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Demographic_Metrics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Family_Sizes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HS_Droupout_Rate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metro_Area_Geography"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metropolitan_Area"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Midwest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mortality_Rates"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Northeast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Number_of_People_Below_Poverty_Level"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Percentage_of_People_Below_Poverty_Level"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Population"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Region"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#South"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#State"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Total_Population_Change"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#West"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Atlanta-SandySprings-Roswell,GA_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Baltimore-Columbia-Towson,MD_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Boston-Cambridge-Newton,MA-NH_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Charlotte-Concord-Gastonia,NC-SC_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chicago-Naperville-Elgin,IL-IN-WI_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dallas-FortWorth-Arlington,TX_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Denver-Aurora-Lakewood,CO_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Detroit-Warren-Dearborn,MI_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Minneapolis-St.Paul-Bloomington,MN-WI_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewYork-Newark-JerseyCity,NY-NJ-PA_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Philadelphia-Camden-Wilmington,PA-NJ-DE-MD_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Phoenix-Mesa-Scottsdale,AZ_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SanFrancisco-Oakland-Hayward,CA_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Seattle-Tacoma-Bellevue,WA_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#St.Louis,MO-IL_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tampa-St.Petersburg-Clearwater,FL_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Washington-Arlington-Alexandria,DC-VA-MD-WV_MetroArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsMetroArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nearbyMetroArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#crime_rate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#family_size"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hs_dropoutRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#mortality_rate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#natural_increase"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#people_below_poverty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#percent_below_poverty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#population"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#total_births"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#total_deaths"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Midwest_Region"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Northeast_Region"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#South_Region"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#St.Louis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#West_Region"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Births"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crime_Rate_Per_Every_100000_Inhabitants"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Deaths"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Family_Sizes"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HS_Droupout_Rate"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Metro_Area_Geography"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Metropolitan_Area"/>
+        <Class IRI="#Demographic_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Midwest"/>
+        <Class IRI="#Region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mortality_Rates"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Northeast"/>
+        <Class IRI="#Region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Number_of_People_Below_Poverty_Level"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Percentage_of_People_Below_Poverty_Level"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Population"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Region"/>
+        <Class IRI="#Demographic_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#South"/>
+        <Class IRI="#Region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State"/>
+        <Class IRI="#Demographic_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Total_Population_Change"/>
+        <Class IRI="#Demographic_Metrics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#West"/>
+        <Class IRI="#Region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Atlanta-SandySprings-Roswell,GA_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Baltimore-Columbia-Towson,MD_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Boston-Cambridge-Newton,MA-NH_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Charlotte-Concord-Gastonia,NC-SC_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chicago-Naperville-Elgin,IL-IN-WI_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dallas-FortWorth-Arlington,TX_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Denver-Aurora-Lakewood,CO_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Detroit-Warren-Dearborn,MI_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Minneapolis-St.Paul-Bloomington,MN-WI_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewYork-Newark-JerseyCity,NY-NJ-PA_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Philadelphia-Camden-Wilmington,PA-NJ-DE-MD_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phoenix-Mesa-Scottsdale,AZ_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SanFrancisco-Oakland-Hayward,CA_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Seattle-Tacoma-Bellevue,WA_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#St.Louis,MO-IL_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tampa-St.Petersburg-Clearwater,FL_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Washington-Arlington-Alexandria,DC-VA-MD-WV_MetroArea"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Births"/>
+        <Class IRI="#Crime_Rate_Per_Every_100000_Inhabitants"/>
+        <Class IRI="#Deaths"/>
+        <Class IRI="#Family_Sizes"/>
+        <Class IRI="#HS_Droupout_Rate"/>
+        <Class IRI="#Metro_Area_Geography"/>
+        <Class IRI="#Mortality_Rates"/>
+        <Class IRI="#Number_of_People_Below_Poverty_Level"/>
+        <Class IRI="#Percentage_of_People_Below_Poverty_Level"/>
+        <Class IRI="#Population"/>
+        <Class IRI="#Total_Population_Change"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Metropolitan_Area"/>
+        <Class IRI="#Region"/>
+        <Class IRI="#State"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Midwest"/>
+        <Class IRI="#South"/>
+        <Class IRI="#West"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Atlanta-SandySprings-Roswell,GA_MetroArea"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Baltimore-Columbia-Towson,MD_MetroArea"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Boston-Cambridge-Newton,MA-NH_MetroArea"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Charlotte-Concord-Gastonia,NC-SC_MetroArea"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chicago-Naperville-Elgin,IL-IN-WI_MetroArea"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dallas-FortWorth-Arlington,TX_MetroArea"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Denver-Aurora-Lakewood,CO_MetroArea"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Detroit-Warren-Dearborn,MI_MetroArea"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dallas-FortWorth-Arlington,TX_MetroArea"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SanFrancisco-Oakland-Hayward,CA_MetroArea"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tampa-St.Petersburg-Clearwater,FL_MetroArea"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Midwest"/>
+        <NamedIndividual IRI="#Midwest_Region"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Region"/>
+        <NamedIndividual IRI="#Midwest_Region"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Minneapolis-St.Paul-Bloomington,MN-WI_MetroArea"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NewYork-Newark-JerseyCity,NY-NJ-PA_MetroArea"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Northeast"/>
+        <NamedIndividual IRI="#Northeast_Region"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Region"/>
+        <NamedIndividual IRI="#Northeast_Region"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Philadelphia-Camden-Wilmington,PA-NJ-DE-MD_MetroArea"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Phoenix-Mesa-Scottsdale,AZ_MetroArea"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SanFrancisco-Oakland-Hayward,CA_MetroArea"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SanFrancisco-Oakland-Hayward,CA_MetroArea"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SanFrancisco-Oakland-Hayward,CA_MetroArea"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Seattle-Tacoma-Bellevue,WA_MetroArea"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Region"/>
+        <NamedIndividual IRI="#South_Region"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#South"/>
+        <NamedIndividual IRI="#South_Region"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#St.Louis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#St.Louis,MO-IL_MetroArea"/>
+        <NamedIndividual IRI="#St.Louis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tampa-St.Petersburg-Clearwater,FL_MetroArea"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Metropolitan_Area"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Washington-Arlington-Alexandria,DC-VA-MD-WV_MetroArea"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Region"/>
+        <NamedIndividual IRI="#West_Region"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#West"/>
+        <NamedIndividual IRI="#West_Region"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Midwest_Region"/>
+        <NamedIndividual IRI="#Northeast_Region"/>
+        <NamedIndividual IRI="#South_Region"/>
+        <NamedIndividual IRI="#West_Region"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocatedIn"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+        <NamedIndividual IRI="#South_Region"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocatedIn"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <NamedIndividual IRI="#South_Region"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocatedIn"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <NamedIndividual IRI="#South_Region"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocatedIn"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <NamedIndividual IRI="#South_Region"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#Midwest_Region"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#Midwest_Region"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#Midwest_Region"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#Midwest_Region"/>
+        <NamedIndividual IRI="#St.Louis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#Northeast_Region"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#Northeast_Region"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#Northeast_Region"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#South_Region"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#South_Region"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#South_Region"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#South_Region"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#South_Region"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#South_Region"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#South_Region"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#South_Region"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#West_Region"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#West_Region"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#West_Region"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#West_Region"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#West_Region"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#West_Region"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <NamedIndividual IRI="#West_Region"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+        <Literal datatypeIRI="&xsd;float">400.9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+        <Literal datatypeIRI="&xsd;float">0.673</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+        <Literal datatypeIRI="&xsd;float">0.118</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+        <Literal datatypeIRI="&xsd;float">624.17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+        <Literal datatypeIRI="&xsd;integer">36681</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+        <Literal datatypeIRI="&xsd;float">0.159</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+        <Literal datatypeIRI="&xsd;integer">5614323</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+        <Literal datatypeIRI="&xsd;integer">71724</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Atlanta-SandySprings-Roswell"/>
+        <Literal datatypeIRI="&xsd;integer">35043</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <Literal datatypeIRI="&xsd;float">646.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <Literal datatypeIRI="&xsd;float">0.646</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <Literal datatypeIRI="&xsd;float">0.105</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <Literal datatypeIRI="&xsd;float">880.15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <Literal datatypeIRI="&xsd;integer">9292</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <Literal datatypeIRI="&xsd;integer">312018</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <Literal datatypeIRI="&xsd;float">0.112</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <Literal datatypeIRI="&xsd;integer">2785874</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <Literal datatypeIRI="&xsd;integer">33812</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Baltimore-Columbia-Towson"/>
+        <Literal datatypeIRI="&xsd;integer">24520</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+        <Literal datatypeIRI="&xsd;float">374.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+        <Literal datatypeIRI="&xsd;float">0.636</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+        <Literal datatypeIRI="&xsd;float">0.088</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+        <Literal datatypeIRI="&xsd;integer">16825</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+        <Literal datatypeIRI="&xsd;integer">492145</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+        <Literal datatypeIRI="&xsd;float">0.104</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+        <Literal datatypeIRI="&xsd;integer">4732161</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+        <Literal datatypeIRI="&xsd;integer">35657</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Boston-Cambridge-Newton"/>
+        <Literal datatypeIRI="&xsd;integer">52482</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+        <Literal datatypeIRI="&xsd;float">170.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+        <Literal datatypeIRI="&xsd;float">0.672</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+        <Literal datatypeIRI="&xsd;float">0.131</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+        <Literal datatypeIRI="&xsd;float">732.93</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+        <Literal datatypeIRI="&xsd;integer">12250</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+        <Literal datatypeIRI="&xsd;float">0.148</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+        <Literal datatypeIRI="&xsd;integer">352286</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+        <Literal datatypeIRI="&xsd;integer">2380314</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+        <Literal datatypeIRI="&xsd;integer">29696</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Charlotte-Concord-Gastonia"/>
+        <Literal datatypeIRI="&xsd;integer">17446</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+        <Literal datatypeIRI="&xsd;float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+        <Literal datatypeIRI="&xsd;float">0.657</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+        <Literal datatypeIRI="&xsd;float">0.128</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+        <Literal datatypeIRI="&xsd;float">733.25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+        <Literal datatypeIRI="&xsd;integer">49346</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+        <Literal datatypeIRI="&xsd;integer">1375862</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+        <Literal datatypeIRI="&xsd;float">0.144</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+        <Literal datatypeIRI="&xsd;integer">9554598</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+        <Literal datatypeIRI="&xsd;integer">119405</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Chicago-Naperville-Elgin"/>
+        <Literal datatypeIRI="&xsd;integer">70059</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <Literal datatypeIRI="&xsd;float">344.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <Literal datatypeIRI="&xsd;float">0.694</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <Literal datatypeIRI="&xsd;float">0.156</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <Literal datatypeIRI="&xsd;float">591.73</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <Literal datatypeIRI="&xsd;integer">55875</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <Literal datatypeIRI="&xsd;integer">1043150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <Literal datatypeIRI="&xsd;float">0.15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <Literal datatypeIRI="&xsd;integer">6954330</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <Literal datatypeIRI="&xsd;integer">97026</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Dallas-FortWorth-Arlington"/>
+        <Literal datatypeIRI="&xsd;integer">41151</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+        <Literal datatypeIRI="&xsd;float">337.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+        <Literal datatypeIRI="&xsd;float">0.624</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+        <Literal datatypeIRI="&xsd;float">0.099</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+        <Literal datatypeIRI="&xsd;float">614.36</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+        <Literal datatypeIRI="&xsd;integer">18324</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+        <Literal datatypeIRI="&xsd;integer">333265</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+        <Literal datatypeIRI="&xsd;float">0.121</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+        <Literal datatypeIRI="&xsd;integer">2754258</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+        <Literal datatypeIRI="&xsd;integer">35245</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Denver-Aurora-Lakewood"/>
+        <Literal datatypeIRI="&xsd;integer">16921</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+        <Literal datatypeIRI="&xsd;float">573.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+        <Literal datatypeIRI="&xsd;float">0.649</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+        <Literal datatypeIRI="&xsd;float">0.114</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+        <Literal datatypeIRI="&xsd;float">917.63</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+        <Literal datatypeIRI="&xsd;integer">10305</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+        <Literal datatypeIRI="&xsd;integer">726127</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+        <Literal datatypeIRI="&xsd;float">0.169</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+        <Literal datatypeIRI="&xsd;integer">4296611</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+        <Literal datatypeIRI="&xsd;integer">49732</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Detroit-Warren-Dearborn"/>
+        <Literal datatypeIRI="&xsd;integer">39427</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+        <Literal datatypeIRI="&xsd;float">561.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+        <Literal datatypeIRI="&xsd;float">0.708</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+        <Literal datatypeIRI="&xsd;float">0.18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+        <Literal datatypeIRI="&xsd;float">571.57</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+        <Literal datatypeIRI="&xsd;integer">57776</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+        <Literal datatypeIRI="&xsd;integer">1064390</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+        <Literal datatypeIRI="&xsd;float">0.164</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+        <Literal datatypeIRI="&xsd;integer">6490180</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+        <Literal datatypeIRI="&xsd;integer">94872</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Houston-TheWoodlands-SugarLand"/>
+        <Literal datatypeIRI="&xsd;integer">37096</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+        <Literal datatypeIRI="&xsd;float">393.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+        <Literal datatypeIRI="&xsd;float">0.68</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+        <Literal datatypeIRI="&xsd;float">0.214</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+        <Literal datatypeIRI="&xsd;float">619.32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+        <Literal datatypeIRI="&xsd;integer">87827</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+        <Literal datatypeIRI="&xsd;integer">2334151</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+        <Literal datatypeIRI="&xsd;float">0.176</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+        <Literal datatypeIRI="&xsd;integer">13262220</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+        <Literal datatypeIRI="&xsd;integer">169963</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#LosAngeles-LongBeach-Anaheim"/>
+        <Literal datatypeIRI="&xsd;integer">82136</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <Literal datatypeIRI="&xsd;float">596.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <Literal datatypeIRI="&xsd;float">0.651</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <Literal datatypeIRI="&xsd;float">0.153</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <Literal datatypeIRI="&xsd;float">830.11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <Literal datatypeIRI="&xsd;integer">16719</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <Literal datatypeIRI="&xsd;integer">1049578</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <Literal datatypeIRI="&xsd;float">0.177</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <Literal datatypeIRI="&xsd;integer">5929819</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <Literal datatypeIRI="&xsd;integer">65943</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Miami-FortLauderdale-WestPalmBeach"/>
+        <Literal datatypeIRI="&xsd;integer">49224</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+        <Literal datatypeIRI="&xsd;float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+        <Literal datatypeIRI="&xsd;float">0.645</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+        <Literal datatypeIRI="&xsd;float">0.07</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+        <Literal datatypeIRI="&xsd;float">625.26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+        <Literal datatypeIRI="&xsd;integer">24080</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+        <Literal datatypeIRI="&xsd;integer">360003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+        <Literal datatypeIRI="&xsd;float">0.103</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+        <Literal datatypeIRI="&xsd;integer">3495176</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Minneapolis-St.Paul-Bloomington"/>
+        <Literal datatypeIRI="&xsd;integer">45934</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+        <Literal datatypeIRI="&xsd;float">406.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+        <Literal datatypeIRI="&xsd;float">0.661</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+        <Literal datatypeIRI="&xsd;float">0.147</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+        <Literal datatypeIRI="&xsd;float">728.35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+        <Literal datatypeIRI="&xsd;integer">105022</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+        <Literal datatypeIRI="&xsd;integer">2933561</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+        <Literal datatypeIRI="&xsd;float">0.146</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+        <Literal datatypeIRI="&xsd;integer">20092883</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+        <Literal datatypeIRI="&xsd;integer">251368</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#NewYork-Newark-JerseyCity"/>
+        <Literal datatypeIRI="&xsd;integer">146346</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+        <Literal datatypeIRI="&xsd;float">532.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+        <Literal datatypeIRI="&xsd;float">0.64</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+        <Literal datatypeIRI="&xsd;float">0.105</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+        <Literal datatypeIRI="&xsd;float">895.35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+        <Literal datatypeIRI="&xsd;integer">18038</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+        <Literal datatypeIRI="&xsd;integer">816908</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+        <Literal datatypeIRI="&xsd;float">0.135</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+        <Literal datatypeIRI="&xsd;integer">6051170</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+        <Literal datatypeIRI="&xsd;integer">72217</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Philadelphia-Camden-Wilmington"/>
+        <Literal datatypeIRI="&xsd;integer">54179</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+        <Literal datatypeIRI="&xsd;float">379.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+        <Literal datatypeIRI="&xsd;float">0.663</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+        <Literal datatypeIRI="&xsd;float">0.135</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+        <Literal datatypeIRI="&xsd;float">682.03</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+        <Literal datatypeIRI="&xsd;integer">29297</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+        <Literal datatypeIRI="&xsd;integer">790083</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+        <Literal datatypeIRI="&xsd;float">0.176</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+        <Literal datatypeIRI="&xsd;integer">4489109</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+        <Literal datatypeIRI="&xsd;integer">59914</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Phoenix-Mesa-Scottsdale"/>
+        <Literal datatypeIRI="&xsd;integer">30617</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+        <Literal datatypeIRI="&xsd;float">354.9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+        <Literal datatypeIRI="&xsd;float">0.744</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+        <Literal datatypeIRI="&xsd;float">0.204</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+        <Literal datatypeIRI="&xsd;float">657.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+        <Literal datatypeIRI="&xsd;integer">32235</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+        <Literal datatypeIRI="&xsd;integer">808424</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+        <Literal datatypeIRI="&xsd;float">0.182</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+        <Literal datatypeIRI="&xsd;integer">4441890</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+        <Literal datatypeIRI="&xsd;integer">61427</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Riverside-SanBernardino-Ontario"/>
+        <Literal datatypeIRI="&xsd;integer">29192</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+        <Literal datatypeIRI="&xsd;float">351.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+        <Literal datatypeIRI="&xsd;float">0.657</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+        <Literal datatypeIRI="&xsd;float">0.091</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+        <Literal datatypeIRI="&xsd;float">647.42</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+        <Literal datatypeIRI="&xsd;integer">23732</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+        <Literal datatypeIRI="&xsd;integer">496042</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+        <Literal datatypeIRI="&xsd;float">0.152</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+        <Literal datatypeIRI="&xsd;integer">3263431</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+        <Literal datatypeIRI="&xsd;integer">44860</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#SanDiego-Carlsbad"/>
+        <Literal datatypeIRI="&xsd;integer">21128</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+        <Literal datatypeIRI="&xsd;float">508.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+        <Literal datatypeIRI="&xsd;float">0.667</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+        <Literal datatypeIRI="&xsd;float">0.145</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+        <Literal datatypeIRI="&xsd;float">664.51</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+        <Literal datatypeIRI="&xsd;integer">22373</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+        <Literal datatypeIRI="&xsd;integer">528317</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+        <Literal datatypeIRI="&xsd;float">0.115</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+        <Literal datatypeIRI="&xsd;integer">4594060</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+        <Literal datatypeIRI="&xsd;integer">52901</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#SanFrancisco-Oakland-Hayward"/>
+        <Literal datatypeIRI="&xsd;integer">30528</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+        <Literal datatypeIRI="&xsd;float">330.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+        <Literal datatypeIRI="&xsd;float">0.625</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+        <Literal datatypeIRI="&xsd;float">0.119</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+        <Literal datatypeIRI="&xsd;float">660.82</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+        <Literal datatypeIRI="&xsd;integer">22053</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+        <Literal datatypeIRI="&xsd;integer">462606</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+        <Literal datatypeIRI="&xsd;float">0.126</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+        <Literal datatypeIRI="&xsd;integer">3671478</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+        <Literal datatypeIRI="&xsd;integer">46315</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Seattle-Tacoma-Bellevue"/>
+        <Literal datatypeIRI="&xsd;integer">24262</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#St.Louis"/>
+        <Literal datatypeIRI="&xsd;float">495.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#St.Louis"/>
+        <Literal datatypeIRI="&xsd;float">0.629</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#St.Louis"/>
+        <Literal datatypeIRI="&xsd;float">0.083</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#St.Louis"/>
+        <Literal datatypeIRI="&xsd;float">907.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#St.Louis"/>
+        <Literal datatypeIRI="&xsd;integer">8165</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#St.Louis"/>
+        <Literal datatypeIRI="&xsd;integer">362001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#St.Louis"/>
+        <Literal datatypeIRI="&xsd;float">0.129</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#St.Louis"/>
+        <Literal datatypeIRI="&xsd;integer">2806207</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#St.Louis"/>
+        <Literal datatypeIRI="&xsd;integer">33623</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#St.Louis"/>
+        <Literal datatypeIRI="&xsd;integer">25458</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+        <Literal datatypeIRI="&xsd;float">435.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+        <Literal datatypeIRI="&xsd;float">0.609</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+        <Literal datatypeIRI="&xsd;float">0.117</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+        <Literal datatypeIRI="&xsd;float">1049.29</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+        <Literal datatypeIRI="&xsd;integer">667</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+        <Literal datatypeIRI="&xsd;integer">449000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+        <Literal datatypeIRI="&xsd;float">0.154</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+        <Literal datatypeIRI="&xsd;integer">2915582</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+        <Literal datatypeIRI="&xsd;integer">31260</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Tampa-St.Petersburg-Clearwater"/>
+        <Literal datatypeIRI="&xsd;integer">30593</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#crime_rate"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+        <Literal datatypeIRI="&xsd;float">334.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#family_size"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+        <Literal datatypeIRI="&xsd;float">0.664</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+        <Literal datatypeIRI="&xsd;float">0.095</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#mortality_rate"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+        <Literal datatypeIRI="&xsd;float">566.48</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#natural_increase"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+        <Literal datatypeIRI="&xsd;integer">47150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#people_below_poverty"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+        <Literal datatypeIRI="&xsd;integer">512868</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+        <Literal datatypeIRI="&xsd;float">0.085</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#population"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+        <Literal datatypeIRI="&xsd;integer">6033737</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_births"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+        <Literal datatypeIRI="&xsd;integer">81330</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total_deaths"/>
+        <NamedIndividual IRI="#Washington-Arlington-Alexandria"/>
+        <Literal datatypeIRI="&xsd;integer">34180</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLocatedIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isPartOf"/>
+        <ObjectProperty IRI="#isLocatedIn"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#containsMetroArea"/>
+        <ObjectProperty IRI="#isLocatedIn"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isLocatedIn"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isPartOf"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLocatedIn"/>
+        <Class IRI="#Metropolitan_Area"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLocatedIn"/>
+        <Class IRI="#Region"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#isLocatedIn"/>
+            <ObjectProperty IRI="#containsMetroArea"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#nearbyMetroArea"/>
+    </SubObjectPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#crime_rate"/>
+        <Class IRI="#Demographic_Area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#family_size"/>
+        <Class IRI="#Demographic_Area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <Class IRI="#Demographic_Area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#mortality_rate"/>
+        <Class IRI="#Demographic_Area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#natural_increase"/>
+        <Class IRI="#Demographic_Area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#people_below_poverty"/>
+        <Class IRI="#Demographic_Area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <Class IRI="#Demographic_Area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#population"/>
+        <Class IRI="#Demographic_Area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#total_births"/>
+        <Class IRI="#Demographic_Area"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#total_deaths"/>
+        <Class IRI="#Demographic_Area"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#crime_rate"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#family_size"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hs_dropoutRate"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#mortality_rate"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#natural_increase"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#people_below_poverty"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#percent_below_poverty"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#population"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#total_births"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#total_deaths"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Dallas-FortWorth-Arlington</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Metropolitan Area in Texas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Houston-TheWoodlands-SugarLand</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Metropolitan Area in Texas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LosAngeles-LongBeach-Anaheim</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A Metropolitan Area in California</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Miami-FortLauderdale-WestPalmBeach</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Metropolitan Area in Florida</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Riverside-SanBernardino-Ontario</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A Metropolitan Area in California</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SanDiego-Carlsbad</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A Metropolitan Area in California</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SanFrancisco-Oakland-Hayward</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A Metropolitan Area in California</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tampa-St.Petersburg-Clearwater</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Metropolitan Area in Florida</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

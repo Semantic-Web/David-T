@@ -1,0 +1,1027 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#"
+     xml:base="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology">
+        <rdfs:comment>An ontology for the demographic metrics in US Metro Areas</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#containsMetroArea -->
+
+    <owl:ObjectProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#containsMetroArea">
+        <owl:inverseOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#isLocatedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#isLocatedIn">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdfs:range rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#isPartOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#isLocatedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#nearbyMetroArea -->
+
+    <owl:ObjectProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#nearbyMetroArea">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#isLocatedIn"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#containsMetroArea"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#crime_rate -->
+
+    <owl:DatatypeProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#crime_rate">
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#family_size -->
+
+    <owl:DatatypeProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#family_size">
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#hs_dropoutRate -->
+
+    <owl:DatatypeProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#hs_dropoutRate">
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#mortality_rate -->
+
+    <owl:DatatypeProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#mortality_rate">
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#natural_increase -->
+
+    <owl:DatatypeProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#natural_increase">
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#people_below_poverty -->
+
+    <owl:DatatypeProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#people_below_poverty">
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#percent_below_poverty -->
+
+    <owl:DatatypeProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#percent_below_poverty">
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#population -->
+
+    <owl:DatatypeProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#population">
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#total_births -->
+
+    <owl:DatatypeProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#total_births">
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#total_deaths -->
+
+    <owl:DatatypeProperty rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#total_deaths">
+        <rdfs:domain rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Births -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Births">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Crime_Rate_Per_Every_100000_Inhabitants -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Crime_Rate_Per_Every_100000_Inhabitants">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Deaths -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Deaths">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Family_Sizes -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Family_Sizes">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#HS_Droupout_Rate -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#HS_Droupout_Rate">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metro_Area_Geography -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metro_Area_Geography">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Midwest -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Midwest">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Mortality_Rates -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Mortality_Rates">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Northeast -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Northeast">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Number_of_People_Below_Poverty_Level -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Number_of_People_Below_Poverty_Level">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Percentage_of_People_Below_Poverty_Level -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Percentage_of_People_Below_Poverty_Level">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Population -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Population">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#State -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#State">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Total_Population_Change -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Total_Population_Change">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Demographic_Metrics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#West -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#West">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Atlanta-SandySprings-Roswell,GA_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Atlanta-SandySprings-Roswell,GA_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Baltimore-Columbia-Towson,MD_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Baltimore-Columbia-Towson,MD_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Boston-Cambridge-Newton,MA-NH_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Boston-Cambridge-Newton,MA-NH_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Charlotte-Concord-Gastonia,NC-SC_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Charlotte-Concord-Gastonia,NC-SC_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Chicago-Naperville-Elgin,IL-IN-WI_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Chicago-Naperville-Elgin,IL-IN-WI_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Dallas-FortWorth-Arlington,TX_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Dallas-FortWorth-Arlington,TX_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Denver-Aurora-Lakewood,CO_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Denver-Aurora-Lakewood,CO_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Detroit-Warren-Dearborn,MI_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Detroit-Warren-Dearborn,MI_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Minneapolis-St.Paul-Bloomington,MN-WI_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Minneapolis-St.Paul-Bloomington,MN-WI_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#NewYork-Newark-JerseyCity,NY-NJ-PA_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#NewYork-Newark-JerseyCity,NY-NJ-PA_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Philadelphia-Camden-Wilmington,PA-NJ-DE-MD_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Philadelphia-Camden-Wilmington,PA-NJ-DE-MD_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Phoenix-Mesa-Scottsdale,AZ_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Phoenix-Mesa-Scottsdale,AZ_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanFrancisco-Oakland-Hayward,CA_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanFrancisco-Oakland-Hayward,CA_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Seattle-Tacoma-Bellevue,WA_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Seattle-Tacoma-Bellevue,WA_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#St.Louis,MO-IL_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#St.Louis,MO-IL_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Tampa-St.Petersburg-Clearwater,FL_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Tampa-St.Petersburg-Clearwater,FL_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Washington-Arlington-Alexandria,DC-VA-MD-WV_MetroArea -->
+
+    <owl:Class rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Washington-Arlington-Alexandria,DC-VA-MD-WV_MetroArea">
+        <rdfs:subClassOf rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Atlanta-SandySprings-Roswell -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Atlanta-SandySprings-Roswell">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Atlanta-SandySprings-Roswell,GA_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.118</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.159</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.673</family_size>
+        <total_deaths rdf:datatype="&xsd;integer">35043</total_deaths>
+        <natural_increase rdf:datatype="&xsd;integer">36681</natural_increase>
+        <crime_rate rdf:datatype="&xsd;float">400.9</crime_rate>
+        <population rdf:datatype="&xsd;integer">5614323</population>
+        <mortality_rate rdf:datatype="&xsd;float">624.17</mortality_rate>
+        <total_births rdf:datatype="&xsd;integer">71724</total_births>
+        <isLocatedIn rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South_Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Baltimore-Columbia-Towson -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Baltimore-Columbia-Towson">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Baltimore-Columbia-Towson,MD_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.105</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.112</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.646</family_size>
+        <total_deaths rdf:datatype="&xsd;integer">24520</total_deaths>
+        <population rdf:datatype="&xsd;integer">2785874</population>
+        <people_below_poverty rdf:datatype="&xsd;integer">312018</people_below_poverty>
+        <total_births rdf:datatype="&xsd;integer">33812</total_births>
+        <crime_rate rdf:datatype="&xsd;float">646.2</crime_rate>
+        <mortality_rate rdf:datatype="&xsd;float">880.15</mortality_rate>
+        <natural_increase rdf:datatype="&xsd;integer">9292</natural_increase>
+        <isLocatedIn rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South_Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Boston-Cambridge-Newton -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Boston-Cambridge-Newton">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Boston-Cambridge-Newton,MA-NH_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.088</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.104</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.636</family_size>
+        <natural_increase rdf:datatype="&xsd;integer">16825</natural_increase>
+        <total_births rdf:datatype="&xsd;integer">35657</total_births>
+        <crime_rate rdf:datatype="&xsd;float">374.7</crime_rate>
+        <population rdf:datatype="&xsd;integer">4732161</population>
+        <people_below_poverty rdf:datatype="&xsd;integer">492145</people_below_poverty>
+        <total_births rdf:datatype="&xsd;integer">52482</total_births>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Charlotte-Concord-Gastonia -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Charlotte-Concord-Gastonia">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Charlotte-Concord-Gastonia,NC-SC_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.131</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.148</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.672</family_size>
+        <natural_increase rdf:datatype="&xsd;integer">12250</natural_increase>
+        <crime_rate rdf:datatype="&xsd;float">170.4</crime_rate>
+        <total_deaths rdf:datatype="&xsd;integer">17446</total_deaths>
+        <population rdf:datatype="&xsd;integer">2380314</population>
+        <total_births rdf:datatype="&xsd;integer">29696</total_births>
+        <percent_below_poverty rdf:datatype="&xsd;integer">352286</percent_below_poverty>
+        <mortality_rate rdf:datatype="&xsd;float">732.93</mortality_rate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Chicago-Naperville-Elgin -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Chicago-Naperville-Elgin">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Chicago-Naperville-Elgin,IL-IN-WI_MetroArea"/>
+        <crime_rate rdf:datatype="&xsd;float">0.0</crime_rate>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.128</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.144</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.657</family_size>
+        <total_births rdf:datatype="&xsd;integer">119405</total_births>
+        <people_below_poverty rdf:datatype="&xsd;integer">1375862</people_below_poverty>
+        <natural_increase rdf:datatype="&xsd;integer">49346</natural_increase>
+        <total_deaths rdf:datatype="&xsd;integer">70059</total_deaths>
+        <mortality_rate rdf:datatype="&xsd;float">733.25</mortality_rate>
+        <population rdf:datatype="&xsd;integer">9554598</population>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Dallas-FortWorth-Arlington -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Dallas-FortWorth-Arlington">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Dallas-FortWorth-Arlington,TX_MetroArea"/>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.15</percent_below_poverty>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.156</hs_dropoutRate>
+        <family_size rdf:datatype="&xsd;float">0.694</family_size>
+        <people_below_poverty rdf:datatype="&xsd;integer">1043150</people_below_poverty>
+        <crime_rate rdf:datatype="&xsd;float">344.7</crime_rate>
+        <total_deaths rdf:datatype="&xsd;integer">41151</total_deaths>
+        <natural_increase rdf:datatype="&xsd;integer">55875</natural_increase>
+        <mortality_rate rdf:datatype="&xsd;float">591.73</mortality_rate>
+        <population rdf:datatype="&xsd;integer">6954330</population>
+        <total_births rdf:datatype="&xsd;integer">97026</total_births>
+        <rdfs:comment>Metropolitan Area in Texas</rdfs:comment>
+        <isLocatedIn rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South_Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Denver-Aurora-Lakewood -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Denver-Aurora-Lakewood">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Denver-Aurora-Lakewood,CO_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.099</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.121</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.624</family_size>
+        <total_deaths rdf:datatype="&xsd;integer">16921</total_deaths>
+        <natural_increase rdf:datatype="&xsd;integer">18324</natural_increase>
+        <population rdf:datatype="&xsd;integer">2754258</population>
+        <people_below_poverty rdf:datatype="&xsd;integer">333265</people_below_poverty>
+        <crime_rate rdf:datatype="&xsd;float">337.5</crime_rate>
+        <total_births rdf:datatype="&xsd;integer">35245</total_births>
+        <mortality_rate rdf:datatype="&xsd;float">614.36</mortality_rate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Detroit-Warren-Dearborn -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Detroit-Warren-Dearborn">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Detroit-Warren-Dearborn,MI_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.114</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.169</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.649</family_size>
+        <natural_increase rdf:datatype="&xsd;integer">10305</natural_increase>
+        <total_deaths rdf:datatype="&xsd;integer">39427</total_deaths>
+        <population rdf:datatype="&xsd;integer">4296611</population>
+        <total_births rdf:datatype="&xsd;integer">49732</total_births>
+        <crime_rate rdf:datatype="&xsd;float">573.8</crime_rate>
+        <people_below_poverty rdf:datatype="&xsd;integer">726127</people_below_poverty>
+        <mortality_rate rdf:datatype="&xsd;float">917.63</mortality_rate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Houston-TheWoodlands-SugarLand -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Houston-TheWoodlands-SugarLand">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Dallas-FortWorth-Arlington,TX_MetroArea"/>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.164</percent_below_poverty>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.18</hs_dropoutRate>
+        <family_size rdf:datatype="&xsd;float">0.708</family_size>
+        <people_below_poverty rdf:datatype="&xsd;integer">1064390</people_below_poverty>
+        <total_deaths rdf:datatype="&xsd;integer">37096</total_deaths>
+        <crime_rate rdf:datatype="&xsd;float">561.5</crime_rate>
+        <mortality_rate rdf:datatype="&xsd;float">571.57</mortality_rate>
+        <natural_increase rdf:datatype="&xsd;integer">57776</natural_increase>
+        <population rdf:datatype="&xsd;integer">6490180</population>
+        <total_births rdf:datatype="&xsd;integer">94872</total_births>
+        <rdfs:comment>Metropolitan Area in Texas</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#LosAngeles-LongBeach-Anaheim -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#LosAngeles-LongBeach-Anaheim">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanFrancisco-Oakland-Hayward,CA_MetroArea"/>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.176</percent_below_poverty>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.214</hs_dropoutRate>
+        <family_size rdf:datatype="&xsd;float">0.68</family_size>
+        <population rdf:datatype="&xsd;integer">13262220</population>
+        <total_births rdf:datatype="&xsd;integer">169963</total_births>
+        <people_below_poverty rdf:datatype="&xsd;integer">2334151</people_below_poverty>
+        <crime_rate rdf:datatype="&xsd;float">393.0</crime_rate>
+        <mortality_rate rdf:datatype="&xsd;float">619.32</mortality_rate>
+        <total_deaths rdf:datatype="&xsd;integer">82136</total_deaths>
+        <natural_increase rdf:datatype="&xsd;integer">87827</natural_increase>
+        <rdfs:comment>A Metropolitan Area in California</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Miami-FortLauderdale-WestPalmBeach -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Miami-FortLauderdale-WestPalmBeach">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Tampa-St.Petersburg-Clearwater,FL_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.153</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.177</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.651</family_size>
+        <people_below_poverty rdf:datatype="&xsd;integer">1049578</people_below_poverty>
+        <natural_increase rdf:datatype="&xsd;integer">16719</natural_increase>
+        <total_deaths rdf:datatype="&xsd;integer">49224</total_deaths>
+        <population rdf:datatype="&xsd;integer">5929819</population>
+        <crime_rate rdf:datatype="&xsd;float">596.7</crime_rate>
+        <total_births rdf:datatype="&xsd;integer">65943</total_births>
+        <mortality_rate rdf:datatype="&xsd;float">830.11</mortality_rate>
+        <rdfs:comment>Metropolitan Area in Florida</rdfs:comment>
+        <isLocatedIn rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South_Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Midwest_Region -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Midwest_Region">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Midwest"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Chicago-Naperville-Elgin"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Detroit-Warren-Dearborn"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Minneapolis-St.Paul-Bloomington"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#St.Louis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Minneapolis-St.Paul-Bloomington -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Minneapolis-St.Paul-Bloomington">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Minneapolis-St.Paul-Bloomington,MN-WI_MetroArea"/>
+        <crime_rate rdf:datatype="&xsd;float">0.0</crime_rate>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.07</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.103</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.645</family_size>
+        <natural_increase rdf:datatype="&xsd;integer">24080</natural_increase>
+        <population rdf:datatype="&xsd;integer">3495176</population>
+        <people_below_poverty rdf:datatype="&xsd;integer">360003</people_below_poverty>
+        <total_births rdf:datatype="&xsd;integer">45934</total_births>
+        <mortality_rate rdf:datatype="&xsd;float">625.26</mortality_rate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#NewYork-Newark-JerseyCity -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#NewYork-Newark-JerseyCity">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#NewYork-Newark-JerseyCity,NY-NJ-PA_MetroArea"/>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.146</percent_below_poverty>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.147</hs_dropoutRate>
+        <family_size rdf:datatype="&xsd;float">0.661</family_size>
+        <natural_increase rdf:datatype="&xsd;integer">105022</natural_increase>
+        <total_deaths rdf:datatype="&xsd;integer">146346</total_deaths>
+        <population rdf:datatype="&xsd;integer">20092883</population>
+        <total_births rdf:datatype="&xsd;integer">251368</total_births>
+        <people_below_poverty rdf:datatype="&xsd;integer">2933561</people_below_poverty>
+        <crime_rate rdf:datatype="&xsd;float">406.0</crime_rate>
+        <mortality_rate rdf:datatype="&xsd;float">728.35</mortality_rate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Northeast_Region -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Northeast_Region">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Northeast"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Boston-Cambridge-Newton"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#NewYork-Newark-JerseyCity"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Philadelphia-Camden-Wilmington"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Philadelphia-Camden-Wilmington -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Philadelphia-Camden-Wilmington">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Philadelphia-Camden-Wilmington,PA-NJ-DE-MD_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.105</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.135</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.64</family_size>
+        <natural_increase rdf:datatype="&xsd;integer">18038</natural_increase>
+        <crime_rate rdf:datatype="&xsd;float">532.3</crime_rate>
+        <total_deaths rdf:datatype="&xsd;integer">54179</total_deaths>
+        <population rdf:datatype="&xsd;integer">6051170</population>
+        <total_births rdf:datatype="&xsd;integer">72217</total_births>
+        <people_below_poverty rdf:datatype="&xsd;integer">816908</people_below_poverty>
+        <mortality_rate rdf:datatype="&xsd;float">895.35</mortality_rate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Phoenix-Mesa-Scottsdale -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Phoenix-Mesa-Scottsdale">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Phoenix-Mesa-Scottsdale,AZ_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.135</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.176</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.663</family_size>
+        <natural_increase rdf:datatype="&xsd;integer">29297</natural_increase>
+        <total_deaths rdf:datatype="&xsd;integer">30617</total_deaths>
+        <crime_rate rdf:datatype="&xsd;float">379.8</crime_rate>
+        <population rdf:datatype="&xsd;integer">4489109</population>
+        <total_births rdf:datatype="&xsd;integer">59914</total_births>
+        <mortality_rate rdf:datatype="&xsd;float">682.03</mortality_rate>
+        <people_below_poverty rdf:datatype="&xsd;integer">790083</people_below_poverty>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Riverside-SanBernardino-Ontario -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Riverside-SanBernardino-Ontario">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanFrancisco-Oakland-Hayward,CA_MetroArea"/>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.182</percent_below_poverty>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.204</hs_dropoutRate>
+        <family_size rdf:datatype="&xsd;float">0.744</family_size>
+        <total_deaths rdf:datatype="&xsd;integer">29192</total_deaths>
+        <natural_increase rdf:datatype="&xsd;integer">32235</natural_increase>
+        <crime_rate rdf:datatype="&xsd;float">354.9</crime_rate>
+        <population rdf:datatype="&xsd;integer">4441890</population>
+        <total_births rdf:datatype="&xsd;integer">61427</total_births>
+        <mortality_rate rdf:datatype="&xsd;float">657.2</mortality_rate>
+        <people_below_poverty rdf:datatype="&xsd;integer">808424</people_below_poverty>
+        <rdfs:comment>A Metropolitan Area in California</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanDiego-Carlsbad -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanDiego-Carlsbad">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanFrancisco-Oakland-Hayward,CA_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.091</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.152</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.657</family_size>
+        <total_deaths rdf:datatype="&xsd;integer">21128</total_deaths>
+        <natural_increase rdf:datatype="&xsd;integer">23732</natural_increase>
+        <population rdf:datatype="&xsd;integer">3263431</population>
+        <crime_rate rdf:datatype="&xsd;float">351.5</crime_rate>
+        <total_births rdf:datatype="&xsd;integer">44860</total_births>
+        <people_below_poverty rdf:datatype="&xsd;integer">496042</people_below_poverty>
+        <mortality_rate rdf:datatype="&xsd;float">647.42</mortality_rate>
+        <rdfs:comment>A Metropolitan Area in California</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanFrancisco-Oakland-Hayward -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanFrancisco-Oakland-Hayward">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanFrancisco-Oakland-Hayward,CA_MetroArea"/>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.115</percent_below_poverty>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.145</hs_dropoutRate>
+        <family_size rdf:datatype="&xsd;float">0.667</family_size>
+        <natural_increase rdf:datatype="&xsd;integer">22373</natural_increase>
+        <total_deaths rdf:datatype="&xsd;integer">30528</total_deaths>
+        <population rdf:datatype="&xsd;integer">4594060</population>
+        <crime_rate rdf:datatype="&xsd;float">508.3</crime_rate>
+        <people_below_poverty rdf:datatype="&xsd;integer">528317</people_below_poverty>
+        <total_births rdf:datatype="&xsd;integer">52901</total_births>
+        <mortality_rate rdf:datatype="&xsd;float">664.51</mortality_rate>
+        <rdfs:comment>A Metropolitan Area in California</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Seattle-Tacoma-Bellevue -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Seattle-Tacoma-Bellevue">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Seattle-Tacoma-Bellevue,WA_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.119</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.126</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.625</family_size>
+        <natural_increase rdf:datatype="&xsd;integer">22053</natural_increase>
+        <total_deaths rdf:datatype="&xsd;integer">24262</total_deaths>
+        <crime_rate rdf:datatype="&xsd;float">330.2</crime_rate>
+        <population rdf:datatype="&xsd;integer">3671478</population>
+        <people_below_poverty rdf:datatype="&xsd;integer">462606</people_below_poverty>
+        <total_births rdf:datatype="&xsd;integer">46315</total_births>
+        <mortality_rate rdf:datatype="&xsd;float">660.82</mortality_rate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South_Region -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South_Region">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Atlanta-SandySprings-Roswell"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Baltimore-Columbia-Towson"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Charlotte-Concord-Gastonia"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Dallas-FortWorth-Arlington"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Houston-TheWoodlands-SugarLand"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Miami-FortLauderdale-WestPalmBeach"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Tampa-St.Petersburg-Clearwater"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Washington-Arlington-Alexandria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#St.Louis -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#St.Louis">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#St.Louis,MO-IL_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.083</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.129</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.629</family_size>
+        <total_deaths rdf:datatype="&xsd;integer">25458</total_deaths>
+        <population rdf:datatype="&xsd;integer">2806207</population>
+        <total_births rdf:datatype="&xsd;integer">33623</total_births>
+        <people_below_poverty rdf:datatype="&xsd;integer">362001</people_below_poverty>
+        <crime_rate rdf:datatype="&xsd;float">495.4</crime_rate>
+        <natural_increase rdf:datatype="&xsd;integer">8165</natural_increase>
+        <mortality_rate rdf:datatype="&xsd;float">907.2</mortality_rate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Tampa-St.Petersburg-Clearwater -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Tampa-St.Petersburg-Clearwater">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Tampa-St.Petersburg-Clearwater,FL_MetroArea"/>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.117</hs_dropoutRate>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.154</percent_below_poverty>
+        <family_size rdf:datatype="&xsd;float">0.609</family_size>
+        <mortality_rate rdf:datatype="&xsd;float">1049.29</mortality_rate>
+        <population rdf:datatype="&xsd;integer">2915582</population>
+        <total_deaths rdf:datatype="&xsd;integer">30593</total_deaths>
+        <total_births rdf:datatype="&xsd;integer">31260</total_births>
+        <crime_rate rdf:datatype="&xsd;float">435.2</crime_rate>
+        <people_below_poverty rdf:datatype="&xsd;integer">449000</people_below_poverty>
+        <natural_increase rdf:datatype="&xsd;integer">667</natural_increase>
+        <rdfs:comment>Metropolitan Area in Florida</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Washington-Arlington-Alexandria -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Washington-Arlington-Alexandria">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Washington-Arlington-Alexandria,DC-VA-MD-WV_MetroArea"/>
+        <percent_below_poverty rdf:datatype="&xsd;float">0.085</percent_below_poverty>
+        <hs_dropoutRate rdf:datatype="&xsd;float">0.095</hs_dropoutRate>
+        <family_size rdf:datatype="&xsd;float">0.664</family_size>
+        <crime_rate rdf:datatype="&xsd;float">334.6</crime_rate>
+        <total_deaths rdf:datatype="&xsd;integer">34180</total_deaths>
+        <natural_increase rdf:datatype="&xsd;integer">47150</natural_increase>
+        <people_below_poverty rdf:datatype="&xsd;integer">512868</people_below_poverty>
+        <mortality_rate rdf:datatype="&xsd;float">566.48</mortality_rate>
+        <population rdf:datatype="&xsd;integer">6033737</population>
+        <total_births rdf:datatype="&xsd;integer">81330</total_births>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#West_Region -->
+
+    <owl:NamedIndividual rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#West_Region">
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region"/>
+        <rdf:type rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#West"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Denver-Aurora-Lakewood"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#LosAngeles-LongBeach-Anaheim"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Phoenix-Mesa-Scottsdale"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Riverside-SanBernardino-Ontario"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanDiego-Carlsbad"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#SanFrancisco-Oakland-Hayward"/>
+        <containsMetroArea rdf:resource="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Seattle-Tacoma-Bellevue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Midwest"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#West"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metropolitan_Area"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Region"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#State"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Midwest_Region"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Northeast_Region"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#South_Region"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#West_Region"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Births"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Crime_Rate_Per_Every_100000_Inhabitants"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Deaths"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Family_Sizes"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#HS_Droupout_Rate"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Metro_Area_Geography"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Mortality_Rates"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Number_of_People_Below_Poverty_Level"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Percentage_of_People_Below_Poverty_Level"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Population"/>
+            <rdf:Description rdf:about="http://lamp.cse.fau.edu/~dterrel3/ThesisOntology#Total_Population_Change"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
