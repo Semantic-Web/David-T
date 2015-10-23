@@ -97,7 +97,7 @@ Total US Population
 The first dataset I used was the US population Estimates provided by Data.gov to find out the total population of each race in the US. I discovered that there were 1014900744 Whites, 182689000 Blacks, 8100100 Asians, 26130392 American Indians, and 5876704 Native Hawaiians. 
  
 Figure 1 Total Population in the US:
-![alt alt tag](raw.githubusercontent.com/Semantic-Web/David-T/master/Term%20Project%20Report/Screenshots/Totals%20Population.png)
+![alt tag](https://raw.githubusercontent.com/Semantic-Web/David-T/master/Term%20Project%20Report/Screenshots/Totals%20Population.png)
 
 Total Number of Deaths for Each Race Caused by the US Law Enforcement:
 ---------------------
