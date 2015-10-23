@@ -84,9 +84,10 @@ Questions:
 
 1. Are minorities in America more likely to be killed by cops than whites?  
 2. Are minorities in America more likely to be injured by cops than whites?  
-3. Are minorities in America that are unarmed more likely to be killed during conflicts with the United States Law enforcement?   
+3. Are minorities in America that are unarmed more likely to be killed during conflicts with the United States Law enforcement?
+
 Challenges:
------------
+----------
 
 Some of the challenges I ran across during this analysis was the lack of police shooting data actually entered into the government database.  This is due to the reason that law enforcement agencies lack “sufficient incentives” to report officer-involved shootings.  Local agencies also don’t properly report the injuries and deaths of police offenders at times either. The Federal Bureau of Investigation captures data on justifiable homicides by law enforcement officers, but reporting is voluntary and limited to instances in which a civilian is killed while committing a felony. 
 Experiment:
