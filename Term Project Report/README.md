@@ -97,7 +97,7 @@ Total US Population
 The first dataset I used was the US population Estimates provided by Data.gov to find out the total population of each race in the US. I discovered that there were 1014900744 Whites, 182689000 Blacks, 8100100 Asians, 26130392 American Indians, and 5876704 Native Hawaiians. 
  
 Figure 1 Total Population in the US:
-![tag](https://github.com/Semantic-Web/David-T/blob/master/Term%20Project%20Report/Totals%20Population.png)
+![alt alt tag](raw.githubusercontent.com/Semantic-Web/David-T/master/Term%20Project%20Report/Screenshots/Totals%20Population.png)
 
 Total Number of Deaths for Each Race Caused by the US Law Enforcement:
 ---------------------
@@ -105,7 +105,7 @@ Total Number of Deaths for Each Race Caused by the US Law Enforcement:
 The first dataset I used was the number of killing by the US Law Enforcement since January 1st 2015 provided by “The Gaurdian” in order to find out the total number of deaths for each race in the US so far. I discovered that 334 Whites, 176 Blacks, 100 Hispanics, 13 Asians and 8 American Indians were killed.  46 races were unknown. 
  
 Figure 2 Total Number of Deaths for Each Race since Jan 1st 2015:
-![tag](https://github.com/Semantic-Web/David-T/blob/master/Term%20Project%20Report/Total%20Deaths%20by%20Race.png)
+![alt tag](https://raw.githubusercontent.com/Semantic-Web/David-T/master/Term%20Project%20Report/Screenshots/Total%20Deaths%20by%20Race.png)
 
 Finding the Total Death Rate for Each Race:
 --------------------------
@@ -113,14 +113,14 @@ Finding the Total Death Rate for Each Race:
 The last dataset I used for my analysis was a combination of the first two datasets using a search engine I implemented in Python.  I took the total deaths of each race divided by the total number population number for each race to retain the correct rate.  My results were as follows: 
  
 Figure 3 Total Death Rate for Each Race
-![tag](https://github.com/Semantic-Web/David-T/blob/master/Term%20Project%20Report/Total%20DeathsRates.png)
+![alt tag](https://raw.githubusercontent.com/Semantic-Web/David-T/master/Term%20Project%20Report/Screenshots/Total%20DeathsRates.png)
 
 Conclusion:
 -------------
 
 After performing my data analysis, I concluded that my hypothesis was accurate.  Although the data shows that more whites have been killed by Americas law enforcement to date, Blacks in fact are being killed at a higher rate than any other minority. 
  
-![tag](https://github.com/Semantic-Web/David-T/blob/master/Term%20Project%20Report/Totals.png)
+![alt tag](https://github.com/Semantic-Web/David-T/blob/master/Term%20Project%20Report/Totals.png)
 
 
 Bibliography
